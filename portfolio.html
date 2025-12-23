@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Мои работы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Стили для слайдера */
+        .slider-container {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .slide {
+            min-width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .slider-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+        
+        .slider-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .dot.active {
+            background: var(--primary);
+        }
+        
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .gallery-info {
+            padding: 20px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">Мое Портфолио</a>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Главная</a>
+                    <a href="about.html" class="nav__link">Обо мне</a>
+                    <a href="portfolio.html" class="nav__link active">Портфолио</a>
+                    <a href="contacts.html" class="nav__link">Контакты</a>
+                </nav>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu__link">Главная</a>
+        <a href="about.html" class="mobile-menu__link">Обо мне</a>
+        <a href="portfolio.html" class="mobile-menu__link active">Портфолио</a>
+        <a href="contacts.html" class="mobile-menu__link">Контакты</a>
+    </div>
+
+    <main class="main">
+        <section class="portfolio">
+            <div class="container">
+                <h1 class="page-title">Мои проекты</h1>
+                <p class="section-subtitle">Здесь представлены мои лучшие работы за последние годы</p>
+                
+                <!-- Слайдер -->
+                <div class="slider-container">
+                    <div class="slider" id="slider">
+                        <div class="slide" style="background-image: url('images/project1.jpg');"></div>
+                        <div class="slide" style="background-image: url('images/project2.jpg');"></div>
+                        <div class="slide" style="background-image: url('images/project3.jpg');"></div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn" id="prevBtn">← Назад</button>
+                    <button class="slider-btn" id="nextBtn">Вперед →</button>
+                </div>
+                
+                <div class="slider-dots" id="sliderDots"></div>
+                
+                <!-- Галерея проектов -->
+                <div class="project-gallery">
+                    <article class="gallery-item" id="project1">
+                        <img src="images/project1.jpg" alt="Корпоративный сайт" class="gallery-img">
+                        <div class="gallery-info">
+                            <h3>Корпоративный сайт "ТехноЛаб"</h3>
+                            <p>Полностью адаптивный сайт для IT-компании. Использованы: HTML5, CSS3 Grid/Flexbox, JavaScript, PHP для формы обратной связи.</p>
+                            <p><strong>Срок:</strong> 3 недели</p>
+                            <a href="#" class="project-link">Посмотреть проект →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" id="project2">
+                        <img src="images/project2.jpg" alt="Интернет-магазин" class="gallery-img">
+                        <div class="gallery-info">
+                            <h3>Интернет-магазин "EcoStore"</h3>
+                            <p>E-commerce платформа с корзиной, фильтрацией товаров и оплатой. React.js, Node.js, MongoDB.</p>
+                            <p><strong>Срок:</strong> 2 месяца</p>
+                            <a href="#" class="project-link">Посмотреть проект →</a>
+                        </div>
+                    </article>
+                    
+                    <article class="gallery-item" id="project3">
+                        <img src="images/project3.jpg" alt="Мобильное приложение" class="gallery-img">
+                        <div class="gallery-info">
+                            <h3>Мобильное приложение "FitTrack"</h3>
+                            <p>Приложение для отслеживания тренировок и питания. React Native, Redux, Firebase.</p>
+                            <p><strong>Срок:</strong> 4 месяца</p>
+                            <a href="#" class="project-link">Посмотреть проект →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 Мое Портфолио. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/burger.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">Мое Портфолио</a>
+                
+                <nav class="nav">
+                    <a href="index.html" class="nav__link active">Главная</a>
+                    <a href="about.html" class="nav__link">Обо мне</a>
+                    <a href="portfolio.html" class="nav__link">Портфолио</a>
+                    <a href="contacts.html" class="nav__link">Контакты</a>
+                </nav>
+                
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu__link active">Главная</a>
+        <a href="about.html" class="mobile-menu__link">Обо мне</a>
+        <a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
+        <a href="contacts.html" class="mobile-menu__link">Контакты</a>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <div class="hero__text">
+                        <h1 class="hero__title">Привет, я <span class="highlight">Арсен</span></h1>
+                        <p class="hero__subtitle">Веб-разработчик и дизайнер</p>
+                        <p class="hero__description">Создаю современные, адаптивные сайты с чистым кодом и продуманным дизайном.</p>
+                        <div class="hero__buttons">
+                            <a href="portfolio.html" class="btn btn-primary">Мои работы</a>
+                            <a href="contacts.html" class="btn btn-secondary">Связаться</a>
+                        </div>
+                    </div>
+                    <div class="hero__image">
+                        <img src="images/avatar.jpg" alt="Фото разработчика" class="avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <div class="container">
+                <h2 class="section-title">Мои навыки</h2>
+                <div class="skills__grid">
+                    <div class="skill-card">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h3>Верстка</h3>
+                        <p>HTML5, CSS3, Flexbox, Grid, БЭМ</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-mobile-alt skill-icon"></i>
+                        <h3>Адаптивность</h3>
+                        <p>Медиазапросы, Mobile First</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-palette skill-icon"></i>
+                        <h3>Дизайн</h3>
+                        <p>Figma, Adobe XD, UI/UX</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js skill-icon"></i>
+                        <h3>JavaScript</h3>
+                        <p>ES6+, DOM, AJAX, React</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest-projects">
+            <div class="container">
+                <h2 class="section-title">Последние проекты</h2>
+                <div class="projects-preview">
+                    <article class="project-card">
+                        <img src="images/project1.jpg" alt="Проект 1" class="project-img">
+                        <div class="project-info">
+                            <h3>Корпоративный сайт</h3>
+                            <p>Адаптивный лендинг для IT-компании</p>
+                            <a href="portfolio.html#project1" class="project-link">Подробнее →</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/project2.jpg" alt="Проект 2" class="project-img">
+                        <div class="project-info">
+                            <h3>Интернет-магазин</h3>
+                            <p>E-commerce платформа на React</p>
+                            <a href="portfolio.html#project2" class="project-link">Подробнее →</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="text-center">
+                    <a href="portfolio.html" class="btn">Все проекты</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">	
+            <div class="footer__content">
+                <p>&copy; 2025 Мое Портфолио. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/burger.js"></script>
+</body>
+</html>

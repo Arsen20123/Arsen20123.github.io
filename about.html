@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Обо мне</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/burger.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">Мое Портфолио</a>
+                <nav class="nav">
+                    <a href="index.html" class="nav__link">Главная</a>
+                    <a href="about.html" class="nav__link active">Обо мне</a>
+                    <a href="portfolio.html" class="nav__link">Портфолио</a>
+                    <a href="contacts.html" class="nav__link">Контакты</a>
+                </nav>
+                <div class="burger" id="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-menu__link">Главная</a>
+        <a href="about.html" class="mobile-menu__link active">Обо мне</a>
+        <a href="portfolio.html" class="mobile-menu__link">Портфолио</a>
+        <a href="contacts.html" class="mobile-menu__link">Контакты</a>
+    </div>
+
+    <main class="main">
+        <section class="about">
+            <div class="container">
+                <h1 class="page-title">Обо мне</h1>
+                
+                <div class="about__content">
+                    <div class="about__image">
+                        <img src="images/avatars.jpg" alt="Мое фото" class="about-avatar">
+                    </div>
+                    <div class="about__text">
+                        <h2>Привет! Меня зовут Арсен</h2>
+                        <p>Я веб-разработчик с более чем 2-летним опытом создания современных и функциональных веб-сайтов. Специализируюсь на фронтенд-разработке, но также имею опыт работы с бэкендом.</p>
+                        
+                        <h3>Мой путь</h3>
+                        <p>Начал свой путь в IT с изучения HTML и CSS, затем углубился в JavaScript. Постоянно учусь новым технологиям и слежу за трендами веб-разработки.</p>
+                        
+                        <h3>Образование</h3>
+                        <ul class="education-list">
+                            <li><strong>2026:</strong> Курсы веб-разработки (HTML Academy, Stepik)</li>
+                            <li><strong>2025:</strong> Самостоятельное изучение</li>
+                            <li><strong>2024-2025:</strong> Аграрный университет (Информационные системы)</li>
+                        </ul>
+                        
+                        <div class="about__stats">
+                            <div class="stat">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Завершенных проектов</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Года опыта</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Довольных клиентов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline">
+                    <h3>Опыт работы</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2025 - настоящее время</div>
+                        <div class="timeline-content">
+                            <h4>Frontend-разработчик в WebStudio</h4>
+                            <p>Разработка пользовательских интерфейсов, верстка по макетам, работа с React.js</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024</div>
+                        <div class="timeline-content">
+                            <h4>Верстальщик (фриланс)</h4>
+                            <p>Создание адаптивных сайтов для малого бизнеса</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 Мое Портфолио. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/burger.js"></script>
+</body>
+</html>
